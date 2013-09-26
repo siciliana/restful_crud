@@ -50,8 +50,8 @@ post '/signup' do
   # saves new user info to db
 
   if params[:password] == params[:confirm_password]
-    @new_user = User.create(username: params[:username], password: params[:password])
-    session[:id] = @new_user.id
+    new_user = User.create(username: params[:username], password: params[:password])
+    session[:id] = new_user.id
     erb :index
   end 
 end
@@ -60,7 +60,7 @@ post '/create_note' do
   # creates and saves a new note to the db 
 
   @post = Note.create(title: params[:title], content: params[:content])
-  session[:id] = @new_user.id
+  # session[:id] = @new_user.id
   erb :index
 end
 
