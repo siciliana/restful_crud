@@ -24,6 +24,16 @@ h1 a:hover {
   color: red;
 }
 
+.header_links li, a, ul{
+  display: inline;
+  text-decoration: none;
+  margin-top: 0;
+  padding-top: 0;
+  background: black;
+  width: auto;
+  color: white;
+}
+
 .navbar a {
     text-decoration: none;
     color: white;
